@@ -57,36 +57,11 @@ function App() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('https://formspree.io/f/oficinadamulta.nf@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          service: formData.service,
-          message: formData.message,
-          _subject: `Nova mensagem de ${formData.name} - ${formData.service || 'Consulta Geral'}`
-        }),
-      });
-
-      if (response.ok) {
-        alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-      } else {
-        throw new Error('Erro no envio');
-      }
-    } catch (error) {
-      console.error('Erro:', error);
-      alert('❌ Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.');
-    }
+    // Netlify Forms vai processar automaticamente
+    alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
+    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
   };
 
   return (
@@ -486,7 +461,8 @@ function App() {
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Envie sua Mensagem</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form name="contato" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="form-name" value="contato" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

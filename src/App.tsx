@@ -61,7 +61,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://formspree.io/f/xeqynpnp', {
+      const response = await fetch('https://formspree.io/f/oficinadamulta.nf@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

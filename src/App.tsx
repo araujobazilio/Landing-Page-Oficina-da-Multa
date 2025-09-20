@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, FileText, Car, CreditCard, Car as IdCard, Copy, Calculator, Search, Menu, X, Phone, Mail, MapPin, Clock, CheckCircle, Users, Star, ArrowRight } from 'lucide-react';
+import { Shield, FileText, Car, CreditCard, Car as IdCard, Menu, X, Phone, Mail, MapPin, Clock, CheckCircle, Users, Star, ArrowRight } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,12 +57,36 @@ function App() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode integrar com seu sistema de contato
-    console.log('Formulário enviado:', formData);
-    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+
+    try {
+      const response = await fetch('https://formspree.io/f/xeqynpnp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          _subject: `Nova mensagem de ${formData.name} - ${formData.service || 'Consulta Geral'}`
+        }),
+      });
+
+      if (response.ok) {
+        alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+      } else {
+        throw new Error('Erro no envio');
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+      alert('❌ Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.');
+    }
   };
 
   return (

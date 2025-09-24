@@ -14,6 +14,21 @@
 
       gtag('config', 'AW-16474951542');
     </script>
+    <!-- Event snippet for Clique WhatsApp – Site (conversion) -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16474951542/j-0dCM7bpaEbEPae7689',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,6 +1,6 @@
 # PROGRESSO - Landing Page Oficina da Multa
 
-Data: 2025-09-24 16:49:00 -03
+Data: 2025-09-24 17:06:40 -03
 
 ## Alterações realizadas
 
@@ -30,6 +30,16 @@ Data: 2025-09-24 16:49:00 -03
   - `loading="lazy"` e `decoding="async"` nas imagens fora da primeira dobra
     - Imagem da seção "Sobre"
     - Logo do rodapé
+
+- Tag e Conversão Google Ads
+  - Adicionada Google tag (gtag.js) em `index.html` com ID `AW-16474951542`
+  - Adicionado snippet de conversão `gtag_report_conversion` (Clique WhatsApp – Site)
+  - Disparo de conversão aplicado em todos os links/botões de WhatsApp (`onClick`)
+
+- Rastreamento de campanha (UTM)
+  - Adicionados parâmetros UTM na mensagem dos links `wa.me` para diferenciação de origem/variação:
+    - `utm_source=google`, `utm_medium=cpc`, `utm_campaign=leiseca`, e `utm_content` contextual (ex.: `nav_cta_desktop`, `floating_cta_mobile`, `hero_cta_whatsapp`, `gravissimas_*`, `sobre_cta`, `contato_info`, `footer_*`)
+  - Observação: como `wa.me` não aceita múltiplos parâmetros de URL além de `text`, as UTMs foram incorporadas no corpo da mensagem, após uma quebra de linha, para referência manual ou automação futura.
 
 ## Próximos passos sugeridos
 - Revisar deploy no Netlify após commit/push

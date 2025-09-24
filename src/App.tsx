@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Shield, FileText, Car, CreditCard, Car as IdCard, Menu, X, Phone, Mail, MapPin, Clock, CheckCircle, Users, Star, ArrowRight } from 'lucide-react';
 
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url?: string) => boolean;
+  }
+}
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -91,7 +97,7 @@ function App() {
               <a href="#contato" className="text-white hover:text-orange-100 font-medium transition-colors">
                 Contato
               </a>
-              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-2 rounded-full hover:bg-orange-50 transition-all transform hover:scale-105 font-medium">
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dnav_cta_desktop" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-2 rounded-full hover:bg-orange-50 transition-all transform hover:scale-105 font-medium" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                 Ligar Agora
               </a>
             </nav>
@@ -121,7 +127,7 @@ function App() {
                 <a href="#contato" className="text-white hover:text-orange-100 font-medium">
                   Contato
                 </a>
-                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-3 rounded-full hover:bg-orange-50 transition-colors text-center font-medium">
+                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dnav_cta_mobile" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-3 rounded-full hover:bg-orange-50 transition-colors text-center font-medium" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                   Ligar Agora
                 </a>
               </nav>
@@ -135,10 +141,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
           <p className="text-sm text-gray-700 font-medium">CNH suspensa? Fale agora com um especialista via WhatsApp</p>
           <a
-            href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!"
+            href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dsticky_cta_desktop"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors"
+            onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}
           >
             Falar no WhatsApp
           </a>
@@ -147,10 +154,11 @@ function App() {
 
       {/* WhatsApp Floating Button (Mobile) */}
       <a
-        href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!"
+        href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dfloating_cta_mobile"
         target="_blank"
         rel="noopener noreferrer"
         className="md:hidden fixed bottom-4 right-4 z-50 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 hover:bg-green-600"
+        onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}
       >
         <Phone className="h-5 w-5" />
         <span>WhatsApp</span>
@@ -179,10 +187,11 @@ function App() {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
-                href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+                href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dhero_cta_whatsapp" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group border-2 border-orange-500 text-orange-500 px-8 py-4 rounded-full hover:bg-orange-500 hover:text-white transition-all font-semibold text-lg inline-flex items-center space-x-2"
+                onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}
               >
                 <Phone className="h-5 w-5" />
                 <span>(22) 99261-3485</span>
@@ -358,10 +367,11 @@ function App() {
               Entre em contato agora mesmo e evite a suspensão da sua CNH!
             </p>
             <a 
-              href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+              href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dinfracoes_cta_global" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200 md:py-4 md:text-lg md:px-10"
+              onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}
             >
               Fale com um Especialista
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -390,7 +400,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Lei Seca</h3>
               <p className="text-gray-600 mb-4">Defesa técnica para evitar suspensão e reduzir impactos.</p>
-              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dgravissimas_leiseca" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                 Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </div>
@@ -401,7 +411,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">CNH Suspensa</h3>
               <p className="text-gray-600 mb-4">Análise do processo e recursos administrativos completos.</p>
-              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dgravissimas_cnh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                 Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </div>
@@ -412,7 +422,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Excesso +50%</h3>
               <p className="text-gray-600 mb-4">Estratégia específica para reduzir penalidades e preservar sua CNH.</p>
-              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dgravissimas_excesso50" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                 Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </div>
@@ -423,7 +433,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Racha</h3>
               <p className="text-gray-600 mb-4">Atuação imediata para mitigar efeitos e conduzir a melhor defesa.</p>
-              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dgravissimas_racha" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                 Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </div>
@@ -441,10 +451,11 @@ function App() {
               </div>
             </div>
             <a 
-              href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+              href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dgravissimas_cta_final" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors"
+              onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}
             >
               Falar com um Especialista Agora
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -499,10 +510,11 @@ function App() {
                 </div>
                 <div className="pt-6">
                   <a 
-                    href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+                    href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dsobre_cta" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200"
+                    onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}
                   >
                     Fale com um Especialista Agora
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -551,7 +563,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">WhatsApp</h3>
-                  <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors block">(22) 99261-3485</a>
+                  <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dcontato_info" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors block" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>(22) 99261-3485</a>
                 </div>
               </div>
 
@@ -814,7 +826,7 @@ function App() {
                 Referência nacional em assessoria e defesa administrativa de infrações de trânsito, atuando em todo o Brasil. Cuidamos da sua tranquilidade no trânsito com serviços de qualidade e atendimento personalizado.
               </p>
               <div className="flex space-x-4">
-                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-orange-500 transition-colors">
+                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dfooter_brand_icon" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-orange-500 transition-colors" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                   <Phone className="h-5 w-5 text-orange-400 group-hover:text-white" />
                 </a>
                 <a href="mailto:oficinadamulta.nf@gmail.com" className="bg-gray-800 p-3 rounded-full hover:bg-orange-500 transition-colors">
@@ -842,7 +854,7 @@ function App() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-orange-400 mr-2 mt-0.5 flex-shrink-0" />
-                  <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">(22) 99261-3485</a>
+                  <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dfooter_contact_link" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>(22) 99261-3485</a>
                 </li>
                 <li className="flex items-start">
                   <Mail className="h-5 w-5 text-orange-400 mr-2 mt-0.5 flex-shrink-0" />
@@ -875,7 +887,7 @@ function App() {
                     <path d="M12 22.75c-2.96 0-5.75-1.1-7.86-3.09C1.97 17.66.85 14.95.85 12c0-2.95 1.1-5.75 3.09-7.85C5.34 1.97 8.05.85 11 .85c1.61 0 3.17.32 4.64.95.47.21.81.68.81 1.28v2.84c0 .5-.36.93-.85 1.01l-2.51.5c-.4.08-.69.45-.69.87v1.7c0 .5-.41.9-.9.9h-1.6c-.5 0-.9-.4-.9-.9v-4.6c0-.5.4-.9.9-.9h4.6c.5 0 .9.4.9.9v.6h-3.1c-.28 0-.5.22-.5.5s.22.5.5.5h2.1c.5 0 .9.4.9.9v2.2c0 .5-.4.9-.9.9h-1.1c-.5 0-.9.4-.9.9v.6c0 .5.4.9.9.9h.6c.5 0 .9.4.9.9v1.7c0 .5-.4.9-.9.9h-1.1c-.5 0-.9.4-.9.9v2.6c0 .5.4.9.9.9h2.6c.5 0 .9-.4.9-.9v-1.1c0-.5.4-.9.9-.9h1.7c.5 0 .9-.4.9-.9v-2.1c0-.28.22-.5.5-.5h.6c.5 0 .9-.4.9-.9v-2.84c0-.6.34-1.07.81-1.28 1.47-.63 3.03-.95 4.64-.95 2.95 0 5.75 1.1 7.85 3.09 1.99 2.1 3.11 4.81 3.11 7.76 0 2.96-1.1 5.75-3.09 7.86-2.1 1.99-4.81 3.11-7.76 3.11z"/>
                   </svg>
                 </a>
-                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!%0A%0Autm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dleiseca%26utm_content%3Dfooter_social_whatsapp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors" onClick={() => { window.gtag_report_conversion && window.gtag_report_conversion(); }}>
                   <span className="sr-only">WhatsApp</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M17.498 14.382l-2.78-1.11c-.64-.254-.747-.414-1.058.26-.218.473-.841 1.22-1.02 1.44-.2.256-.4.29-.74.1-.34-.19-1.44-.53-2.74-1.69-1.01-.9-1.69-2.01-1.89-2.35-.19-.34-.02-.53.14-.7.15-.15.34-.39.51-.6.17-.2.23-.34.34-.56.11-.23.06-.42-.02-.59-.07-.18-.62-1.49-.85-2.04-.22-.55-.45-.47-.62-.48h-.53c-.18 0-.48.08-.74.36-.25.28-.97.95-.97 2.31 0 1.37 1.01 2.68 1.14 2.87.14.19 1.96 3.07 4.77 4.31.66.29 1.19.47 1.6.6.67.23 1.28.2 1.76.12.53-.08 1.63-.67 1.86-1.32.23-.65.23-1.21.16-1.33-.07-.12-.25-.19-.53-.34z"/>

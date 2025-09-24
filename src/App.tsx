@@ -85,10 +85,13 @@ function App() {
               <a href="#sobre" className="text-white hover:text-orange-100 font-medium transition-colors">
                 Sobre
               </a>
+              <a href="#gravissimas" className="text-white hover:text-orange-100 font-medium transition-colors">
+                Gravíssimas
+              </a>
               <a href="#contato" className="text-white hover:text-orange-100 font-medium transition-colors">
                 Contato
               </a>
-              <a href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-2 rounded-full hover:bg-orange-50 transition-all transform hover:scale-105 font-medium">
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-2 rounded-full hover:bg-orange-50 transition-all transform hover:scale-105 font-medium">
                 Ligar Agora
               </a>
             </nav>
@@ -112,10 +115,13 @@ function App() {
                 <a href="#sobre" className="text-white hover:text-orange-100 font-medium">
                   Sobre
                 </a>
+                <a href="#gravissimas" className="text-white hover:text-orange-100 font-medium">
+                  Gravíssimas
+                </a>
                 <a href="#contato" className="text-white hover:text-orange-100 font-medium">
                   Contato
                 </a>
-                <a href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-3 rounded-full hover:bg-orange-50 transition-colors text-center font-medium">
+                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-500 px-6 py-3 rounded-full hover:bg-orange-50 transition-colors text-center font-medium">
                   Ligar Agora
                 </a>
               </nav>
@@ -123,6 +129,32 @@ function App() {
           )}
         </div>
       </header>
+
+      {/* WhatsApp CTA Sticky (Desktop) */}
+      <div className="hidden md:block fixed top-24 w-full bg-white/95 backdrop-blur-sm shadow z-40 border-b border-orange-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+          <p className="text-sm text-gray-700 font-medium">CNH suspensa? Fale agora com um especialista via WhatsApp</p>
+          <a
+            href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      {/* WhatsApp Floating Button (Mobile) */}
+      <a
+        href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="md:hidden fixed bottom-4 right-4 z-50 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 hover:bg-green-600"
+      >
+        <Phone className="h-5 w-5" />
+        <span>WhatsApp</span>
+      </a>
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 bg-gradient-to-br from-orange-50 via-white to-orange-50 overflow-hidden">
@@ -136,8 +168,7 @@ function App() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Especialistas em defesa de multas, transferências e documentação veicular. 
-              Mais de <strong>15 anos de experiência</strong> cuidando da sua tranquilidade no trânsito.
+              Recebeu multa da Lei Seca ou teve a CNH suspensa? Nós podemos ajudar a recorrer e evitar a perda da sua habilitação.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -148,14 +179,28 @@ function App() {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
-                href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+                href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group border-2 border-orange-500 text-orange-500 px-8 py-4 rounded-full hover:bg-orange-500 hover:text-white transition-all font-semibold text-lg inline-flex items-center space-x-2"
               >
                 <Phone className="h-5 w-5" />
-                <span>(21) 96917-4273</span>
+                <span>(22) 99261-3485</span>
               </a>
+            </div>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white/80 rounded-xl px-4 py-3 shadow border border-orange-100 text-center">
+                <div className="text-2xl font-bold text-gray-900">15+</div>
+                <div className="text-sm text-gray-600">anos de atuação</div>
+              </div>
+              <div className="bg-white/80 rounded-xl px-4 py-3 shadow border border-orange-100 text-center">
+                <div className="text-2xl font-bold text-gray-900">6.000+</div>
+                <div className="text-sm text-gray-600">processos atendidos</div>
+              </div>
+              <div className="bg-white/80 rounded-xl px-4 py-3 shadow border border-orange-100 text-center">
+                <div className="text-2xl font-bold text-gray-900">95%</div>
+                <div className="text-sm text-gray-600">taxa de sucesso</div>
+              </div>
             </div>
           </div>
         </div>
@@ -313,12 +358,95 @@ function App() {
               Entre em contato agora mesmo e evite a suspensão da sua CNH!
             </p>
             <a 
-              href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+              href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200 md:py-4 md:text-lg md:px-10"
             >
               Fale com um Especialista
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      {/* Gravíssimas Section */}
+      <section id="gravissimas" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Recursos de Multas Gravíssimas (Lei Seca, CNH Suspensa)
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Especialistas em defesa técnica para as infrações que mais impactam sua CNH. Aja rápido e fale agora com nosso time.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+              <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-red-500" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Lei Seca</h3>
+              <p className="text-gray-600 mb-4">Defesa técnica para evitar suspensão e reduzir impactos.</p>
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+                Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+              <div className="bg-yellow-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <IdCard className="h-6 w-6 text-yellow-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">CNH Suspensa</h3>
+              <p className="text-gray-600 mb-4">Análise do processo e recursos administrativos completos.</p>
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+                Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+              <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Car className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Excesso +50%</h3>
+              <p className="text-gray-600 mb-4">Estratégia específica para reduzir penalidades e preservar sua CNH.</p>
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+                Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all">
+              <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Car className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Racha</h3>
+              <p className="text-gray-600 mb-4">Atuação imediata para mitigar efeitos e conduzir a melhor defesa.</p>
+              <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+                Falar no WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md border border-gray-100 text-left mb-8">
+              <p className="text-gray-600 italic mb-4">"Tive a CNH suspensa e precisava de ajuda urgente. A equipe foi muito ágil e conseguiu reverter a situação. Recomendo!"</p>
+              <div className="flex items-center">
+                <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center text-orange-500 font-bold text-lg mr-4">A</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Alexandre M.</h4>
+                  <p className="text-sm text-gray-500">CNH Suspensa</p>
+                </div>
+              </div>
+            </div>
+            <a 
+              href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors"
+            >
+              Falar com um Especialista Agora
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>
@@ -371,7 +499,7 @@ function App() {
                 </div>
                 <div className="pt-6">
                   <a 
-                    href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
+                    href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200"
@@ -389,6 +517,8 @@ function App() {
                   src="https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Equipe da Oficina da Multa"
                   className="w-full h-96 object-cover rounded-2xl"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
@@ -421,7 +551,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">WhatsApp</h3>
-                  <a href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors block">(21) 96917-4273</a>
+                  <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors block">(22) 99261-3485</a>
                 </div>
               </div>
 
@@ -509,7 +639,7 @@ function App() {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="(21) 96917-4273"
+                      placeholder="(22) 99261-3485"
                     />
                   </div>
                   <div>
@@ -677,14 +807,14 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/5 - oficina da mult 3.png" alt="Oficina da Multa" className="h-10 w-auto" />
+                <img src="/5 - oficina da mult 3.png" alt="Oficina da Multa" className="h-10 w-auto" loading="lazy" decoding="async" />
                 <span className="text-2xl font-bold text-white">Oficina da Multa</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Referência nacional em assessoria e defesa administrativa de infrações de trânsito, atuando em todo o Brasil. Cuidamos da sua tranquilidade no trânsito com serviços de qualidade e atendimento personalizado.
               </p>
               <div className="flex space-x-4">
-                <a href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-orange-500 transition-colors">
+                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-orange-500 transition-colors">
                   <Phone className="h-5 w-5 text-orange-400 group-hover:text-white" />
                 </a>
                 <a href="mailto:oficinadamulta.nf@gmail.com" className="bg-gray-800 p-3 rounded-full hover:bg-orange-500 transition-colors">
@@ -712,7 +842,7 @@ function App() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-orange-400 mr-2 mt-0.5 flex-shrink-0" />
-                  <a href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">(21) 96917-4273</a>
+                  <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">(22) 99261-3485</a>
                 </li>
                 <li className="flex items-start">
                   <Mail className="h-5 w-5 text-orange-400 mr-2 mt-0.5 flex-shrink-0" />
@@ -745,7 +875,7 @@ function App() {
                     <path d="M12 22.75c-2.96 0-5.75-1.1-7.86-3.09C1.97 17.66.85 14.95.85 12c0-2.95 1.1-5.75 3.09-7.85C5.34 1.97 8.05.85 11 .85c1.61 0 3.17.32 4.64.95.47.21.81.68.81 1.28v2.84c0 .5-.36.93-.85 1.01l-2.51.5c-.4.08-.69.45-.69.87v1.7c0 .5-.41.9-.9.9h-1.6c-.5 0-.9-.4-.9-.9v-4.6c0-.5.4-.9.9-.9h4.6c.5 0 .9.4.9.9v.6h-3.1c-.28 0-.5.22-.5.5s.22.5.5.5h2.1c.5 0 .9.4.9.9v2.2c0 .5-.4.9-.9.9h-1.1c-.5 0-.9.4-.9.9v.6c0 .5.4.9.9.9h.6c.5 0 .9.4.9.9v1.7c0 .5-.4.9-.9.9h-1.1c-.5 0-.9.4-.9.9v2.6c0 .5.4.9.9.9h2.6c.5 0 .9-.4.9-.9v-1.1c0-.5.4-.9.9-.9h1.7c.5 0 .9-.4.9-.9v-2.1c0-.28.22-.5.5-.5h.6c.5 0 .9-.4.9-.9v-2.84c0-.6.34-1.07.81-1.28 1.47-.63 3.03-.95 4.64-.95 2.95 0 5.75 1.1 7.85 3.09 1.99 2.1 3.11 4.81 3.11 7.76 0 2.96-1.1 5.75-3.09 7.86-2.1 1.99-4.81 3.11-7.76 3.11z"/>
                   </svg>
                 </a>
-                <a href="https://wa.me/5521969174273?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <a href="https://wa.me/5522992613485?text=Ola!%20Preciso%20de%20ajuda%20com%20uma%20multa%20de%20tr%C3%A2nsito!" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
                   <span className="sr-only">WhatsApp</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M17.498 14.382l-2.78-1.11c-.64-.254-.747-.414-1.058.26-.218.473-.841 1.22-1.02 1.44-.2.256-.4.29-.74.1-.34-.19-1.44-.53-2.74-1.69-1.01-.9-1.69-2.01-1.89-2.35-.19-.34-.02-.53.14-.7.15-.15.34-.39.51-.6.17-.2.23-.34.34-.56.11-.23.06-.42-.02-.59-.07-.18-.62-1.49-.85-2.04-.22-.55-.45-.47-.62-.48h-.53c-.18 0-.48.08-.74.36-.25.28-.97.95-.97 2.31 0 1.37 1.01 2.68 1.14 2.87.14.19 1.96 3.07 4.77 4.31.66.29 1.19.47 1.6.6.67.23 1.28.2 1.76.12.53-.08 1.63-.67 1.86-1.32.23-.65.23-1.21.16-1.33-.07-.12-.25-.19-.53-.34z"/>

@@ -41,6 +41,9 @@ Data: 2025-09-24 17:06:40 -03
     - `utm_source=google`, `utm_medium=cpc`, `utm_campaign=leiseca`, e `utm_content` contextual (ex.: `nav_cta_desktop`, `floating_cta_mobile`, `hero_cta_whatsapp`, `gravissimas_*`, `sobre_cta`, `contato_info`, `footer_*`)
   - Observação: como `wa.me` não aceita múltiplos parâmetros de URL além de `text`, as UTMs foram incorporadas no corpo da mensagem, após uma quebra de linha, para referência manual ou automação futura.
 
+- Correções de conteúdo
+  - Removido o termo "(Racismo)" do título do card "Racha" na seção de Infrações Autossuspensivas em `src/App.tsx`.
+
 ## Próximos passos sugeridos
 - Revisar deploy no Netlify após commit/push
 - Acompanhar métricas (cliques no WhatsApp) via UTM/Netlify Analytics

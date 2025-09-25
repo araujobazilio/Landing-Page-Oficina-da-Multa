@@ -343,7 +343,7 @@ function App() {
               <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Car className="h-6 w-6 text-red-500" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Racha (Racismo)</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Racha</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-red-500 font-bold mr-2">•</span>
